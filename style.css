@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --bg: white;
+  --text: black;
+  --accent: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
+.sidebar {
+  width: 240px;
+  background-color:	#f9f6f0;
+  height: 100vh;
+  position: fixed;
+  padding: 40px 20px;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-logo {
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 120px;
+  height: 100px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li button:hover {
+  background-color: #f1e9dc;
+  color: white;
+}
+
+main {
+  margin-left: 240px;
+  padding: 0;
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  background: url("images/hero.png") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 150px;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-box h1 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  color: var(--accent);
+}
+
+.contact-button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.section {
+  display: none;
+  padding: 60px 40px;
+}
+
+.Projects img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.Projects img:hover {
+  transform: scale(1.03);
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.09);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+   .hero {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+   .logo-box {
+    margin: 0 auto !important;
+    padding: 30px !important;
+    border-radius: 50px !important;
+   }
+
+  .sidebar {
+    width: 80px; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 5px; 
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.03);
+    background-color: var(--bg);
+    overflow-y: auto; 
+  }
+
+  .sidebar-logo {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .sidebar-logo .logo-min {
+    font-size: 14px;
+  }
+
+  .sidebar ul li button {
+    padding: 8px;
+    font-size: 12px;
+    color: var(--text) !important; 
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  main {
+    margin-left: 80px;     
+    width: calc(100% - 80px);
+  }
+
+  .Projects img {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+  }
+}
