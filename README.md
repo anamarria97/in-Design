@@ -24,4 +24,5 @@ AH Design is a portfolio website showcasing different interior design projects. 
 - **CSS**: For styling the layout, design, and transitions.
 - **JavaScript**: Handling interactivity such as the sidebar toggle, dynamic section display, and lightbox functionality.
 
----
+##Netlify
+-You can view this project at chubby-chub-panda.netlify.app
